@@ -1,0 +1,190 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{41A8FB21-68AA-43A5-9C79-D915786B80B5}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Disassembler.Core</RootNamespace>
+    <AssemblyName>Disassembler.Core</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BytePattern.cs" />
+    <Compile Include="Instruction.cs" />
+    <Compile Include="Opcodes\Aaa.cs" />
+    <Compile Include="Opcodes\Aad.cs" />
+    <Compile Include="Opcodes\Aam.cs" />
+    <Compile Include="Opcodes\Aas.cs" />
+    <Compile Include="Opcodes\Adc1.cs" />
+    <Compile Include="Opcodes\Adc2.cs" />
+    <Compile Include="Opcodes\Adc3.cs" />
+    <Compile Include="Opcodes\Add1.cs" />
+    <Compile Include="Opcodes\Add2.cs" />
+    <Compile Include="Opcodes\Add3.cs" />
+    <Compile Include="Opcodes\And1.cs" />
+    <Compile Include="Opcodes\And2.cs" />
+    <Compile Include="Opcodes\And3.cs" />
+    <Compile Include="Opcodes\Call1.cs" />
+    <Compile Include="Opcodes\Call2.cs" />
+    <Compile Include="Opcodes\Call3.cs" />
+    <Compile Include="Opcodes\Call4.cs" />
+    <Compile Include="Opcodes\Cbw.cs" />
+    <Compile Include="Opcodes\Clc.cs" />
+    <Compile Include="Opcodes\Cld.cs" />
+    <Compile Include="Opcodes\Cli.cs" />
+    <Compile Include="Opcodes\Cmc.cs" />
+    <Compile Include="Opcodes\Cmp1.cs" />
+    <Compile Include="Opcodes\Cmp2.cs" />
+    <Compile Include="Opcodes\Cmp3.cs" />
+    <Compile Include="Opcodes\Cmpsb.cs" />
+    <Compile Include="Opcodes\Cmpsw.cs" />
+    <Compile Include="Opcodes\Cwd.cs" />
+    <Compile Include="Opcodes\Daa.cs" />
+    <Compile Include="Opcodes\Das.cs" />
+    <Compile Include="Opcodes\Dec1.cs" />
+    <Compile Include="Opcodes\Dec2.cs" />
+    <Compile Include="Opcodes\Div.cs" />
+    <Compile Include="Opcodes\Esc.cs" />
+    <Compile Include="Opcodes\Hlt.cs" />
+    <Compile Include="Opcodes\Idiv.cs" />
+    <Compile Include="Opcodes\Imul.cs" />
+    <Compile Include="Opcodes\In1.cs" />
+    <Compile Include="Opcodes\In2.cs" />
+    <Compile Include="Opcodes\Inc1.cs" />
+    <Compile Include="Opcodes\Inc2.cs" />
+    <Compile Include="Opcodes\Int1.cs" />
+    <Compile Include="Opcodes\Int2.cs" />
+    <Compile Include="Opcodes\Into.cs" />
+    <Compile Include="Opcodes\Iret.cs" />
+    <Compile Include="Opcodes\Jb.cs" />
+    <Compile Include="Opcodes\Jbe.cs" />
+    <Compile Include="Opcodes\Jcxz.cs" />
+    <Compile Include="Opcodes\Je.cs" />
+    <Compile Include="Opcodes\Jl.cs" />
+    <Compile Include="Opcodes\Jle.cs" />
+    <Compile Include="Opcodes\Jmp1.cs" />
+    <Compile Include="Opcodes\Jmp2.cs" />
+    <Compile Include="Opcodes\Jmp3.cs" />
+    <Compile Include="Opcodes\Jmp4.cs" />
+    <Compile Include="Opcodes\Jmp5.cs" />
+    <Compile Include="Opcodes\Jnb.cs" />
+    <Compile Include="Opcodes\Jnbe.cs" />
+    <Compile Include="Opcodes\Jne.cs" />
+    <Compile Include="Opcodes\Jnl.cs" />
+    <Compile Include="Opcodes\Jnle.cs" />
+    <Compile Include="Opcodes\Jno.cs" />
+    <Compile Include="Opcodes\Jnp.cs" />
+    <Compile Include="Opcodes\Jns.cs" />
+    <Compile Include="Opcodes\Jo.cs" />
+    <Compile Include="Opcodes\Jp.cs" />
+    <Compile Include="Opcodes\Js.cs" />
+    <Compile Include="Opcodes\Lahf.cs" />
+    <Compile Include="Opcodes\Lds.cs" />
+    <Compile Include="Opcodes\Lea.cs" />
+    <Compile Include="Opcodes\Les.cs" />
+    <Compile Include="Opcodes\Lock.cs" />
+    <Compile Include="Opcodes\Lodsb.cs" />
+    <Compile Include="Opcodes\Lodsw.cs" />
+    <Compile Include="Opcodes\Loop.cs" />
+    <Compile Include="Opcodes\Loopnz.cs" />
+    <Compile Include="Opcodes\Loopz.cs" />
+    <Compile Include="Opcodes\Mov1.cs" />
+    <Compile Include="Opcodes\Mov2.cs" />
+    <Compile Include="Opcodes\Mov3.cs" />
+    <Compile Include="Opcodes\Mov4.cs" />
+    <Compile Include="Opcodes\Mov5.cs" />
+    <Compile Include="Opcodes\Movsb.cs" />
+    <Compile Include="Opcodes\Movsw.cs" />
+    <Compile Include="Opcodes\Mul.cs" />
+    <Compile Include="Opcodes\Neg.cs" />
+    <Compile Include="Opcodes\Nop.cs" />
+    <Compile Include="Opcodes\Not.cs" />
+    <Compile Include="Opcodes\Opcode.cs" />
+    <Compile Include="Opcodes\Opcodes.cs" />
+    <Compile Include="Opcodes\Or1.cs" />
+    <Compile Include="Opcodes\Or2.cs" />
+    <Compile Include="Opcodes\Or3.cs" />
+    <Compile Include="Opcodes\Out1.cs" />
+    <Compile Include="Opcodes\Out2.cs" />
+    <Compile Include="Opcodes\Pop1.cs" />
+    <Compile Include="Opcodes\Pop2.cs" />
+    <Compile Include="Opcodes\Pop3.cs" />
+    <Compile Include="Opcodes\Popf.cs" />
+    <Compile Include="Opcodes\Push1.cs" />
+    <Compile Include="Opcodes\Push2.cs" />
+    <Compile Include="Opcodes\Push3.cs" />
+    <Compile Include="Opcodes\Pushf.cs" />
+    <Compile Include="Opcodes\Rcl.cs" />
+    <Compile Include="Opcodes\Rcr.cs" />
+    <Compile Include="Opcodes\Repnz.cs" />
+    <Compile Include="Opcodes\Repz.cs" />
+    <Compile Include="Opcodes\Ret1.cs" />
+    <Compile Include="Opcodes\Ret2.cs" />
+    <Compile Include="Opcodes\Retf1.cs" />
+    <Compile Include="Opcodes\Retf2.cs" />
+    <Compile Include="Opcodes\Rol.cs" />
+    <Compile Include="Opcodes\Ror.cs" />
+    <Compile Include="Opcodes\Sahf.cs" />
+    <Compile Include="Opcodes\Sar.cs" />
+    <Compile Include="Opcodes\Sbb1.cs" />
+    <Compile Include="Opcodes\Sbb2.cs" />
+    <Compile Include="Opcodes\Sbb3.cs" />
+    <Compile Include="Opcodes\Scasb.cs" />
+    <Compile Include="Opcodes\Scasw.cs" />
+    <Compile Include="Opcodes\SegOverride.cs" />
+    <Compile Include="Opcodes\Shl.cs" />
+    <Compile Include="Opcodes\Shr.cs" />
+    <Compile Include="Opcodes\Stc.cs" />
+    <Compile Include="Opcodes\Std.cs" />
+    <Compile Include="Opcodes\Sti.cs" />
+    <Compile Include="Opcodes\Stosb.cs" />
+    <Compile Include="Opcodes\Stosw.cs" />
+    <Compile Include="Opcodes\Sub1.cs" />
+    <Compile Include="Opcodes\Sub2.cs" />
+    <Compile Include="Opcodes\Sub3.cs" />
+    <Compile Include="Opcodes\Test1.cs" />
+    <Compile Include="Opcodes\Test2.cs" />
+    <Compile Include="Opcodes\Test3.cs" />
+    <Compile Include="Opcodes\Wait.cs" />
+    <Compile Include="Opcodes\Xchg1.cs" />
+    <Compile Include="Opcodes\Xchg2.cs" />
+    <Compile Include="Opcodes\Xlat.cs" />
+    <Compile Include="Opcodes\Xor1.cs" />
+    <Compile Include="Opcodes\Xor2.cs" />
+    <Compile Include="Opcodes\Xor3.cs" />
+    <Compile Include="Operand.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
